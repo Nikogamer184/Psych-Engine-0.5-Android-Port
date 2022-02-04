@@ -68,16 +68,16 @@ class PlayState extends MusicBeatState
 	public static var STRUM_X_MIDDLESCROLL = -278;
 
 	public static var ratingStuff:Array<Dynamic> = [
-		['YOU SUCK', 0.2], //From 0% to 19%
-		['YOU SUCK', 0.4], //From 20% to 39%
-		['YOU SUCK', 0.5], //From 40% to 49%
-		['YOU SUCK', 0.6], //From 50% to 59%
-		['YOU SUCK', 0.69], //From 60% to 68%
-		['YOU SUCK', 0.7], //69%
-		['YOU SUCK', 0.8], //From 70% to 79%
-		['Ehh', 0.9], //From 80% to 89%
-		['GODLIKE!!!!', 1], //From 90% to 99%
-		['PERFECT!!!!!!', 1] //The value on this one isn't used actually, since Perfect is always "1"
+		['', 0.2], //From 0% to 19%
+		['', 0.4], //From 20% to 39%
+		['', 0.5], //From 40% to 49%
+		['', 0.6], //From 50% to 59%
+		['', 0.69], //From 60% to 68%
+		['', 0.7], //69%
+		['', 0.8], //From 70% to 79%
+		['', 0.9], //From 80% to 89%
+		['', 1], //From 90% to 99%
+		['', 1] //The value on this one isn't used actually, since Perfect is always "1"
 	];
 	
 	public var modchartTweens:Map<String, FlxTween> = new Map<String, FlxTween>();
@@ -2189,9 +2189,9 @@ class PlayState extends MusicBeatState
 		super.update(elapsed);
 
 		if(ratingName == '?') {
-			scoreTxt.text = 'Song Score: ' + songScore + ' | Song Misses: ' + songMisses + ' | Song Rating: ' + ratingName;
+			scoreTxt.text = 'Song Score: ' + songScore + ' | Song Misses: ' + songMisses + ' | Song Accuracy: ' + ratingName;
 		} else {
-			scoreTxt.text = 'Song Score: ' + songScore + ' | Song Misses: ' + songMisses + ' | Song Rating: ' + ratingName + ' (' + Highscore.floorDecimal(ratingPercent * 100, 2) + '%)' + ' - ' + ratingFC;//peeps wanted no integer rating
+			scoreTxt.text = 'Song Score: ' + songScore + ' | Song Misses: ' + songMisses + ' | Song Accuracy: ' + ratingName + ' (' + Highscore.floorDecimal(ratingPercent * 100, 2) + '%)' + ' - ' + ratingFC;//peeps wanted no integer rating
 		}
 
 		if(botplayTxt.visible) {
