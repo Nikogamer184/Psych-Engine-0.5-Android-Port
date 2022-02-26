@@ -19,7 +19,7 @@ class PauseSubState extends MusicBeatSubstate
 	var grpMenuShit:FlxTypedGroup<Alphabet>;
 
 	var menuItems:Array<String> = [];
-	var menuItemsOG:Array<String> = ['Resume', 'Restart Song', 'Change Difficulty', 'Rage Quit'];
+	var menuItemsOG:Array<String> = ['Resume', 'Restart', 'Change Difficulty', 'Rage Quit', 'Chart Editor'];
 	var difficultyChoices = [];
 	var curSelected:Int = 0;
 
@@ -155,7 +155,7 @@ class PauseSubState extends MusicBeatSubstate
 					regenMenu();
 				case "Chart Editor":
 				    MusicBeatState.switchState(new editors.ChartingState());
-				case "Restart Song":
+				case "Restart":
 					CustomFadeTransition.nextCamera = transCamera;
 					MusicBeatState.resetState();
 					FlxG.sound.music.volume = 0;
