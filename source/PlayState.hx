@@ -1013,8 +1013,8 @@ var versionTxt:FlxText;
 		scoreTxt.visible = !ClientPrefs.hideHud;
 		add(scoreTxt);
 
-			versionTxt = new FlxText(5, FlxG.height - 24, 0, SONG.song + " - " + CoolUtil.difficultyString() + " | BOT | Nic Engine 0.5" , 40); 
-			versionTxt.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+			versionTxt = new FlxText(5, FlxG.height - 24, 0, SONG.song.toUpperCase + " - " + CoolUtil.difficultyString() + " | BOT | Nic Engine 0.5" , 40); 
+			versionTxt.setFormat(Paths.font("vcr.ttf"), 24, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 			versionTxt.scrollFactor.set();
 			add(versionTxt);
 
